@@ -1,0 +1,38 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	outline: 1px solid #ccc;
+}
+body {
+	width: 100vw;
+	height: 100vh;
+}
+.header {
+	height: 100px;
+}
+.face-recognition {
+	display: flex;
+	.video {
+		position: relative;
+		padding: 10px;
+		width: 50%;
+		.stream-video {
+			width: 100%;
+			aspect-ratio: 720 / 540;
+			border-radius: 10px;
+			transform: rotateY(180deg);
+		}
+		canvas {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			// transform: rotateY(180deg);
+		}
+	}
+	.analyst {
+		width: 50%;
+	}
+}
+.footer {
+}

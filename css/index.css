@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 1px solid #ccc;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.header {
+  height: 100px;
+}
+
+.face-recognition {
+  display: flex;
+}
+.face-recognition .video {
+  position: relative;
+  padding: 10px;
+  width: 50%;
+}
+.face-recognition .video .stream-video {
+  width: 100%;
+  aspect-ratio: 720/540;
+  border-radius: 10px;
+  transform: rotateY(180deg);
+}
+.face-recognition .video canvas {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.face-recognition .analyst {
+  width: 50%;
+}
+
+/*# sourceMappingURL=index.css.map */
