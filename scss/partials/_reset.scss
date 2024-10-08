@@ -1,0 +1,21 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	outline: 1px solid #ccc;
+}
+ul,
+ol {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+input,
+button,
+textarea,
+select {
+	font-family: inherit;
+	font-size: inherit;
+}

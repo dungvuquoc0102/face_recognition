@@ -5,14 +5,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Face Recognition</title>
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+  <title>Lesson Analystor</title>
   <script defer src="face-api.min.js"></script>
   <script defer src="script.js"></script>
   <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-  <header class="header"></header>
+  <header class="header">
+    <div class="container">
+      <div class="header-logo">
+        <a href="/"><img src="images/logo.png" alt="logo"></a>
+      </div>
+      <div class="header-menu">
+        <nav class="header-nav">
+          <ul class="header-list">
+            <li class="header-item"><a href="index.html" class="header-link">Lesson Analystor</a></li>
+            <li class="header-item"><a href="index.html" class="header-link">Feature</a></li>
+            <li class="header-item"><a href="index.html" class="header-link">Pricing</a></li>
+            <li class="header-item"><a href="index.html" class="header-link">About</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-function">
+        <a href="#" class="header-button">Sign Up</a>
+        <a href="#" class="header-button">Log In</a>
+      </div>
+    </div>
+  </header>
   <section class="face-recognition">
     <div class="video">
       <video class="stream-video" id="video" autoplay muted playsinline></video>
@@ -25,7 +46,9 @@
       </ul>
     </div>
   </section>
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <div class="container"></div>
+  </footer>
 </body>
 
 </html>
