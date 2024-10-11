@@ -4,6 +4,7 @@
 	const videoBtn = document.querySelector(".video-btn");
 	let stream,
 		videoStatus = false;
+	console.log("start event button");
 	videoBtn.addEventListener("click", async () => {
 		videoBtn.classList.toggle("video-btn-active");
 		if (videoStatus) {
@@ -19,6 +20,7 @@
 	});
 })();
 const studentNumber = 14;
+console.log("start event video");
 video.addEventListener("play", () => {
 	const canvas = faceapi.createCanvasFromMedia(video);
 	const videoSection = document.querySelector(".video");
