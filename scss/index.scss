@@ -84,7 +84,8 @@ body {
 		.video-btn {
 			position: absolute;
 			bottom: 30px;
-			left: calc(50% - 15px);
+			left: 50%;
+			transform: translateX(-50%);
 			width: 50px;
 			height: 50px;
 			display: flex;
@@ -94,6 +95,7 @@ body {
 			background-color: #535353;
 			cursor: pointer;
 			z-index: 10;
+			display: none;
 			.video-btn-start,
 			.video-btn-stop {
 				width: 30px;
@@ -125,6 +127,13 @@ body {
 			.video-btn-stop {
 				display: block;
 			}
+		}
+		.loading-text {
+			position: absolute;
+			bottom: 45px;
+			left: 50%;
+			transform: translateX(-50%);
+			color: #fff;
 		}
 		canvas {
 			position: absolute;

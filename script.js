@@ -1,10 +1,12 @@
 (async () => {
 	await Promise.all([faceapi.nets.tinyFaceDetector.loadFromUri("models"), faceapi.nets.faceLandmark68Net.loadFromUri("models"), faceapi.nets.faceRecognitionNet.loadFromUri("models"), faceapi.nets.faceExpressionNet.loadFromUri("models")]);
-	const video = document.getElementById("video");
+	// const video = document.getElementById("video");
 	const videoBtn = document.querySelector(".video-btn");
+	const loadingText = document.querySelector(".loading-text");
+	videoBtn.style.display = "flex";
+	loadingText.style.display = "none";
 	let stream,
 		videoStatus = false;
-	console.log("start event button");
 	videoBtn.addEventListener("click", async () => {
 		videoBtn.classList.toggle("video-btn-active");
 		if (videoStatus) {
@@ -20,7 +22,6 @@
 	});
 })();
 const studentNumber = 14;
-console.log("start event video");
 video.addEventListener("play", () => {
 	const canvas = faceapi.createCanvasFromMedia(video);
 	const videoSection = document.querySelector(".video");
