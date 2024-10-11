@@ -1,6 +1,5 @@
 (async () => {
 	await Promise.all([faceapi.nets.tinyFaceDetector.loadFromUri("models"), faceapi.nets.faceLandmark68Net.loadFromUri("models"), faceapi.nets.faceRecognitionNet.loadFromUri("models"), faceapi.nets.faceExpressionNet.loadFromUri("models")]);
-	// const video = document.getElementById("video");
 	const videoBtn = document.querySelector(".video-btn");
 	const loadingText = document.querySelector(".loading-text");
 	videoBtn.style.display = "flex";
@@ -22,16 +21,20 @@
 	});
 })();
 const studentNumber = 14;
+const video = document.getElementById("video");
 video.addEventListener("play", () => {
 	const canvas = faceapi.createCanvasFromMedia(video);
-	const videoSection = document.querySelector(".video");
-	// videoSection.append(canvas);
+
 	const displaySize = { width: video.getBoundingClientRect().width, height: video.getBoundingClientRect().height };
 	faceapi.matchDimensions(canvas, displaySize);
 	setInterval(async () => {
 		const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
 
-		//render above the video
+		//append canvas on html
+		// const videoSection = document.querySelector(".video");
+		// videoSection.append(canvas);
+
+		//draw with canvas
 		// const resizedDetections = faceapi.resizeResults(detections, displaySize);
 		// canvas.getContext("2d").clearRect(0, 0, canvas.width, canvas.height);
 		// faceapi.draw.drawDetections(canvas, resizedDetections);
@@ -62,12 +65,13 @@ video.addEventListener("play", () => {
 		}
 
 		//post data to server
-		const data = {
-			studentNumber,
-			onClass: detections.length,
-			offClass: studentNumber - detections.length,
-			quality: detections.length > 0 ? detections[0].expressions.asSortedArray()[0].expression : ""
-		};
+		// const data = {
+		// 	studentNumber,
+		// 	onClass: detections.length,
+		// 	offClass: studentNumber - detections.length,
+		// 	quality: detections.length > 0 ? detections[0].expressions.asSortedArray()[0].expression : ""
+		// };
+		//post data to server use fetch
 		// fetch("http://localhost:3000/data", {
 		// 	method: "POST",
 		// 	headers: {
