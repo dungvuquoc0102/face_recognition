@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
   <title>Lesson Analystor</title>
-  <script defer src="face-api.min.js"></script>
-  <script defer src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="face-api.min.js"></script>
   <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -21,7 +21,8 @@
       <div class="header-menu">
         <nav class="header-nav">
           <ul class="header-list">
-            <li class="header-item"><a href="index.html" class="header-link">Lesson Analystor</a></li>
+            <li class="header-item"><a href="index.html" class="header-link header-link-active">Lesson Analystor</a>
+            </li>
             <li class="header-item"><a href="index.html" class="header-link">Feature</a></li>
             <li class="header-item"><a href="index.html" class="header-link">Pricing</a></li>
             <li class="header-item"><a href="index.html" class="header-link">About</a></li>
@@ -37,18 +38,78 @@
   <section class="face-recognition">
     <div class="video">
       <video class="stream-video" id="video" autoplay muted playsinline></video>
+      <div class="video-btn">
+        <div class="video-btn-start">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
+          </svg>
+        </div>
+        <div class="video-btn-stop">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M12 18.75H4.5a2.25 2.25 0 0 1-2.25-2.25V9m12.841 9.091L16.5 19.5m-1.409-1.409c.407-.407.659-.97.659-1.591v-9a2.25 2.25 0 0 0-2.25-2.25h-9c-.621 0-1.184.252-1.591.659m12.182 12.182L2.909 5.909M1.5 4.5l1.409 1.409" />
+          </svg>
+        </div>
+      </div>
     </div>
     <div class="analyst">
-      <h2>Analyst</h2>
-      <ul id="analyst-list">
-        <li class="student-number">0</li>
-        <li class="quality-class">0</li>
-      </ul>
+      <div class="analyst-wrapper">
+        <div class="analyst-nav">
+          <ul>
+            <li class="analyst-nav-active">General</li>
+            <li>Chart</li>
+            <li>Live</li>
+          </ul>
+        </div>
+        <div class="analyst-content">
+          <div class="analyst-general">
+            <ul>
+              <li>Student number: <span class="general-number">14</span></li>
+              <li>Onclass student number: <span class="general-onclass">5</span></li>
+              <li>Offclass student number: <span class="general-offclass">9</span></li>
+              <li>Class quality: <span class="general-quality">happy</span></li>
+              <li>
+                Detail Student List:
+                <ul>
+                  <li>
+                    <span class="avatar"><img src="images/avatar/NguyenThanhAn.png" alt=""></span>
+                    <span class="name"> Nguyen Thanh An</span>
+                    <span class="online-status"></span>
+                  </li>
+                  <li>
+                    <span class="avatar"><img src="images/avatar/LeHuuTrong.png" alt=""></span>
+                    <span class="name"> Le Huu Trong</span>
+                    <span class="offline-status"></span>
+                  </li>
+                  <li>Vu Quoc Dung</li>
+                  <li>Phan Tuan Manh</li>
+                  <li>Nguyen Truong Giang</li>
+                  <li>Hoang Thanh Huy</li>
+                  <li>Vu Anh Tuan</li>
+                  <li>Nguyen The Han</li>
+                  <li>Nguyen Thanh An</li>
+                  <li>Le Huu Trong</li>
+                  <li>Vu Quoc Dung</li>
+                  <li>Phan Tuan Manh</li>
+                  <li>Nguyen Truong Giang</li>
+                  <li>Hoang Thanh Huy</li>
+                  <li>Vu Anh Tuan</li>
+                  <li>Nguyen The Han</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
   <footer class="footer">
     <div class="container"></div>
   </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>
